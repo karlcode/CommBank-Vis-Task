@@ -29,6 +29,7 @@ test('plotFaceValue should return an array', () => {
   expect(wrapper.instance().plotFaceValue()).toBeDefined()
 });
 
-test('y axis should be numeric values only', () => {
-  
+test('penalties should return an array', () => {
+  const wrapper = shallow(<BarChart/>)
+  expect(wrapper.instance().plotPenalties()).toBeDefined()
 });
