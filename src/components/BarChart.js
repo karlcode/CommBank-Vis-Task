@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {makeWidthFlexible, XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
+import offenceData from './offenceData';
 
 const FlexibleXYPlot = makeWidthFlexible(XYPlot);
 class BarChart extends Component {
@@ -8,17 +9,13 @@ class BarChart extends Component {
     return (
       <div className="App">
         <FlexibleXYPlot
-        height={600}>
+        height={600}
+        xType="ordinal">
         
         <HorizontalGridLines />
-        <VerticalBarSeries
-            data={[
-            {x: 1, y: 10},
-            {x: 2, y: 5},
-            {x: 3, y: 15},
-            {x: 4, y: 1},
-            {x: 5, y: 6}
-            ]}/>
+        <VerticalBarSeries 
+            data={offenceData}/>
+        
         <XAxis />
         <YAxis />
         </FlexibleXYPlot>

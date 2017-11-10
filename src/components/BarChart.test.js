@@ -14,3 +14,7 @@ test('should show figures on hover of node', () => {
 test('should accept an array of data points', () => {
   
 });
+
+test('should show new chart on click of node', () => {
+  
+});
