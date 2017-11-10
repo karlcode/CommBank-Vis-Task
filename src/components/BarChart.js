@@ -33,7 +33,7 @@ class BarChart extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="barChart">
         <FlexibleXYPlot
         height={600}
         xType="ordinal">
