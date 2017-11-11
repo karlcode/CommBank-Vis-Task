@@ -3,6 +3,7 @@ import './App.css';
 import Chart from './Chart';
 import ScatterPlot from './ScatterPlot';
 import { scaleRotate as LeftMenu } from 'react-burger-menu';
+import offenceData from './offenceData';
 
 import {
   BrowserRouter as Router,
@@ -24,7 +25,7 @@ class App extends Component {
             <header className="App-header">
               <h1 className="App-title">Sydney Trains Offences 2013-2014</h1>
             </header>
-            <Route exact path="/" component={Chart}/>
+            <Route exact path="/" render={()=><Chart data={offenceData}/>} />
             <Route path="/scatterplot" component={ScatterPlot}/>
             <p className="App-intro">
               To get started, edit <code>src/App.js</code> and save to reload.

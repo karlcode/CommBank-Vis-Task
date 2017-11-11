@@ -18,17 +18,17 @@ class Chart extends Component {
   }
   render() {
     var layout = [
-      {i: 'bar', x: 1, y: 0, w: 8, h: 2},
+      {i: 'bar', x: 1, y: 0, w: 8, h: 2.5},
       {i: 'pie', x: 10, y: 0, w: 3, h: 1.5}
     ];
     return (
       <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
       <div key="bar">
         <h1>Face Value of Penalties - 2013</h1>
-        <BarGraph data={offenceData}/>
+        <BarGraph data={this.props.data}/>
       </div>
       <div key="pie">
-        <PieGraph data={offenceData}/>
+        <PieGraph data={this.props.data}/>
       </div>
       </ReactGridLayout>
     );

@@ -9,6 +9,7 @@ class PieGraph extends Component {
     return (
         <ResponsiveContainer>
           <PieChart>
+            <Legend align="right" height={36}/>
             <Pie data={this.props.data} dataKey="fv" nameKey="name"  fill="#8884d8" />
           </PieChart>
         </ResponsiveContainer>
