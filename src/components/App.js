@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import BarChart from './BarChart';
+import Chart from './Chart';
 import ScatterPlot from './ScatterPlot';
 import { scaleRotate as LeftMenu } from 'react-burger-menu';
 
@@ -24,7 +24,7 @@ class App extends Component {
             <header className="App-header">
               <h1 className="App-title">Sydney Trains Offences 2013-2014</h1>
             </header>
-            <Route exact path="/" component={BarChart}/>
+            <Route exact path="/" component={Chart}/>
             <Route path="/scatterplot" component={ScatterPlot}/>
             <p className="App-intro">
               To get started, edit <code>src/App.js</code> and save to reload.

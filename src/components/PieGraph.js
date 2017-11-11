@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {PieChart, Pie, CartesianGrid, Tooltip, Legend} from 'recharts';
+import {PieChart, ResponsiveContainer, Pie, CartesianGrid, Tooltip, Legend} from 'recharts';
 import offenceData from './offenceData';
 
 class PieGraph extends Component {
@@ -10,12 +10,11 @@ class PieGraph extends Component {
   
   render() {
     return (
-      <div className="pieGraph">
-        <PieChart width={730} height={250}>
-          <Pie data={offenceData} dataKey="fv" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
-          
+        <ResponsiveContainer>
+        <PieChart >
+          <Pie data={offenceData} dataKey="fv" nameKey="name"  fill="#8884d8" />
         </PieChart>
-      </div>
+        </ResponsiveContainer>
     );
   }
 }
