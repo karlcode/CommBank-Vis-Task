@@ -13,20 +13,22 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div className="App">
-        <LeftMenu>
+      <div className="App" id="outer-container">
+        <LeftMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
         <Link to="/">Home</Link>
         <Link to="/scatterplot">ScatterPlot</Link>
         </LeftMenu>
-        <header className="App-header">
-          
-          <h1 className="App-title">Sydney Trains Offences 2013-2014</h1>
-        </header>
-        <Route exact path="/" component={BarChart}/>
-        <Route exact path="/scatterplot" component={ScatterPlot}/>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div id="page-wrap">
+          <header className="App-header">
+            
+            <h1 className="App-title">Sydney Trains Offences 2013-2014</h1>
+          </header>
+          <Route exact path="/" component={BarChart}/>
+          <Route exact path="/scatterplot" component={ScatterPlot}/>
+          <p className="App-intro">
+            To get started, edit <code>src/App.js</code> and save to reload.
+          </p>
+        </div>
       </div>
       </Router>
     );
