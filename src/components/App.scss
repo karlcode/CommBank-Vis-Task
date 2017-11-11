@@ -1,11 +1,14 @@
 @import "./node_modules/react-vis/dist/style";
 @import "./node_modules/react-grid-layout/css/styles";
 @import "./node_modules/react-resizable/css/styles";
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro";
+
 .App {
   text-align: center;
   width: 100vw;
   height: 100vh;
   background-color: #E5E5E7;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -16,7 +19,7 @@
 
 }
 .sideTitle {
-  margin-top: 100px;
+  margin-top: 120px;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   position: absolute;
