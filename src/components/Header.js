@@ -11,8 +11,8 @@ class Header extends Component {
     }
     handleChange = (event, index, value) => {
         console.log(event)
-        console.log(index)
         console.log(value)
+        this.setState({value: value})
     }
     render() {
         return (

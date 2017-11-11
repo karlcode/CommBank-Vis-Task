@@ -21,9 +21,9 @@ class App extends Component {
       <Provider store={store}>
       <Router>
         <div className="App" id="outer-container">
-          <LeftMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
-          <Link to="/">Home</Link>
-          <Link to="/scatterplot">ScatterPlot</Link>
+          <LeftMenu className="menu" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+          <Link to="/" style={{ textDecoration: 'none' }}><div className="cards">Charts</div></Link>
+          <Link to="/scatterplot" style={{ textDecoration: 'none' }}><div className="cards">Tables</div></Link>
           </LeftMenu>
           <div id="page-wrap">
             <h2 className="sideTitle">Charts</h2>
