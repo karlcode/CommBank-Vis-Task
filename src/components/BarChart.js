@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import {makeWidthFlexible, XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
+import {FlexibleXYPlot, XAxis, YAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
 import offenceData from './offenceData';
+import ReactGridLayout from 'react-grid-layout';
 
-const FlexibleXYPlot = makeWidthFlexible(XYPlot);
 class BarChart extends Component {
   state = {
     series: []
   }
   plotFaceValue(){
-    var fvArray = []
-    offenceData.map((data)=> {
-      fvArray.x = data.offence
-      fvArray.y = data.fv
-      //console.log(fvArray)
-    })
-    console.log(fvArray)
-    this.setState({series: fvArray})
+    for(var i=0; i<offenceData.length; i++){
+      offenceData[i].x = offenceData[i].offence
+      offenceData[i].y = offenceData[i].fv
+      delete offenceData[i].offence
+      delete offenceData[i].fv
+    }
+    this.setState({series: offenceData})
   }
   plotPenalties(){
     var penalties = []
@@ -32,10 +31,14 @@ class BarChart extends Component {
     this.plotFaceValue()
   }
   render() {
+    var layout = [
+      {i: 'a', x: 0, y: 0, w: 8, h: 2},
+      {i: 'b', x: 9, y: 0, w: 3, h: 2, minW: 2, maxW: 4}
+    ];
     return (
-      <div className="barChart">
+      <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1200} >
+      <div className="barChart" key="a">
         <FlexibleXYPlot
-        height={600}
         xType="ordinal">
         
         <HorizontalGridLines />
@@ -46,6 +49,10 @@ class BarChart extends Component {
         <YAxis />
         </FlexibleXYPlot>
       </div>
+      <div key="b">
+        <h1>Sample B</h1>
+      </div>
+      </ReactGridLayout>
     );
   }
 }
