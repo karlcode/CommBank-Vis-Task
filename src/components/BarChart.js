@@ -10,11 +10,11 @@ class BarChart extends Component {
   }
   plotFaceValue(){
     var fvArray = []
-    for(var i=0; i<offenceData.length; i++){
-      var x = offenceData[i].offence
-      var y = offenceData[i].fv
-      fvArray.push({x,y})
-    }
+    offenceData.map((data)=> {
+      fvArray.x = data.offence
+      fvArray.y = data.fv
+      //console.log(fvArray)
+    })
     console.log(fvArray)
     this.setState({series: fvArray})
   }
