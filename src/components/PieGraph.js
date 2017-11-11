@@ -4,16 +4,13 @@ import {PieChart, ResponsiveContainer, Pie, CartesianGrid, Tooltip, Legend} from
 import offenceData from './offenceData';
 
 class PieGraph extends Component {
-  state = {
-    series: []
-  }
-  
+
   render() {
     return (
         <ResponsiveContainer>
-        <PieChart >
-          <Pie data={offenceData} dataKey="fv" nameKey="name"  fill="#8884d8" />
-        </PieChart>
+          <PieChart>
+            <Pie data={this.props.data} dataKey="fv" nameKey="name"  fill="#8884d8" />
+          </PieChart>
         </ResponsiveContainer>
     );
   }

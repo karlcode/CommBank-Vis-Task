@@ -1,15 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
-import BarChart from './BarChart';
+import Chart from './Chart';
 import Enzyme from 'enzyme';
 import {shallow, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-test('renders BarChart without crashing', () => {
+test('renders Chart without crashing', () => {
   const div = document.createElement('div');
-  render(<BarChart />, div);
+  render(<Chart />, div);
 });
 
 
