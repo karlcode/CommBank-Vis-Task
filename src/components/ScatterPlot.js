@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import {ScatterChart,  XAxis, YAxis, ZAxis, Scatter,  CartesianGrid, Tooltip, Legend} from 'recharts';
-import offenceData from './offenceData';
+import {ScatterChart, ResponsiveContainer,  XAxis, YAxis, ZAxis, Scatter,  CartesianGrid, Tooltip, Legend} from 'recharts';
 
 class ScatterPlot extends Component {
-  state = {
-    series: []
-  }
-  
   render() {
     return (
-      <div className="scatterPlot">
-        <ScatterChart width={730} height={250}
+      <ResponsiveContainer width="100%" height="80%">
+        <ScatterChart
           margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="offence" name="stature" unit="cm" />
@@ -19,9 +14,9 @@ class ScatterPlot extends Component {
           <ZAxis dataKey="fv" name="score" unit="km" />
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Legend />
-          <Scatter name="A school" data={offenceData} fill="#8884d8" />
+          <Scatter name="A school" data={this.props.data} fill="#8884d8" />
         </ScatterChart>
-      </div>
+      </ResponsiveContainer>
     );
   }
 }

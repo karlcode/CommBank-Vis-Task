@@ -8,9 +8,9 @@ class PieGraph extends Component {
   render() {
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
     return (
-        <ResponsiveContainer>
+        <ResponsiveContainer width="100%" height="80%">
           <PieChart>
-            <Legend align="right"  height={36} value="fv" dataKey="offence"/>
+            <Legend align="right" height={36} value="fv" dataKey="offence"/>
             <Pie data={this.props.data} dataKey="fv" nameKey="name"  fill="#8884d8">
             {
               this.props.data.map((entry, index) => (

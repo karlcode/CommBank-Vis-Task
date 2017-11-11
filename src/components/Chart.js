@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import offenceData from './offenceData';
 import ReactGridLayout from 'react-grid-layout';
 import BarGraph from './BarGraph'
 import PieGraph from './PieGraph'
+import ScatterPlot from './ScatterPlot'
 class Chart extends Component {
   state = {
     series: []
@@ -29,9 +29,13 @@ class Chart extends Component {
         <BarGraph data={this.props.data}/>
       </div>
       <div className="card" key="pie">
+        <h3>FV Percentages</h3>
         <PieGraph data={this.props.data}/>
       </div>
-      <div className="card" key="third"><h2>Third box</h2></div>
+      <div className="card" key="third">
+        <h3>Face Value Vs Num of Penalties</h3>
+        <ScatterPlot data={this.props.data}/>
+      </div>
       </ReactGridLayout>
     );
   }
