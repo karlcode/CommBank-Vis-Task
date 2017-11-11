@@ -1,21 +1,59 @@
 import React, { Component } from 'react';
 import './App.css';
+import './Table.css';
 import ReactGridLayout from 'react-grid-layout';
+import offenceData from './offenceData'
+import ReactTable from "react-table";
 
-class Table extends Component {
-
-  render() {
-    var layout = [
-      {i: 'bar', x: 1, y: 0, w: 7, h: 2.5},
-      {i: 'pie', x: 9, y: 0, w: 4, h: 1.5},
-      {i: 'third', x: 9, y: 0, w: 4, h: 1},
-    ];
-    return (
-      <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
-      <h1>Test</h1>
-      </ReactGridLayout>
-    );
-  }
+const Table = (props) => {
+  return (
+    <div>
+      <ReactTable
+          data={props.data}
+          columns={[
+            {
+              Header: "Name",
+              columns: [
+                {
+                  Header: "First Name",
+                  accessor: "firstName"
+                },
+                {
+                  Header: "Last Name",
+                  id: "lastName",
+                  accessor: d => d.lastName
+                }
+              ]
+            },
+            {
+              Header: "Info",
+              columns: [
+                {
+                  Header: "Age",
+                  accessor: "age"
+                },
+                {
+                  Header: "Status",
+                  accessor: "status"
+                }
+              ]
+            },
+            {
+              Header: 'Stats',
+              columns: [
+                {
+                  Header: "Visits",
+                  accessor: "visits"
+                }
+              ]
+            }
+          ]}
+          defaultPageSize={10}
+          className="-striped -highlight"
+        />
+    </div>
+  );
 }
+
 
 export default Table;
