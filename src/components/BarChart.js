@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import {FlexibleXYPlot, XAxis, YAxis, HorizontalGridLines, VerticalBarSeries} from 'react-vis';
 import offenceData from './offenceData';
 import ReactGridLayout from 'react-grid-layout';
+import {BarChart as Stack, Bar,  XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
 class BarChart extends Component {
   state = {
@@ -36,21 +36,17 @@ class BarChart extends Component {
       {i: 'b', x: 9, y: 0, w: 3, h: 2, minW: 2, maxW: 4}
     ];
     return (
-      <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1200} >
-      <div className="barChart" key="a">
-        <FlexibleXYPlot
-        xType="ordinal">
-        
-        <HorizontalGridLines />
-        <VerticalBarSeries 
-            data={this.state.series}/>
-        
-        <XAxis />
-        <YAxis />
-        </FlexibleXYPlot>
-      </div>
-      <div key="b">
-        <h1>Sample B</h1>
+      <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
+      <div key="a">
+        <Stack data={offenceData} width={1200} height={600} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="offence" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="penalties" fill="#8884d8" />
+          <Bar dataKey="fv" fill="#82ca9d" />
+        </Stack>
       </div>
       </ReactGridLayout>
     );
