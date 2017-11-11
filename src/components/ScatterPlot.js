@@ -10,7 +10,7 @@ const ScatterPlot = (props) =>{
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="short" name="Offence" />
         <YAxis dataKey="fv" name="# of Penalties"/>
-        <ZAxis dataKey="penalties" name="Face Value" />
+        <ZAxis dataKey="avgpenalty" name="Face Value" />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Legend />
         <Scatter name="2013" data={props.data} fill="#8884d8" />

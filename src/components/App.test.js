@@ -4,6 +4,7 @@ import App from './App';
 import Enzyme from 'enzyme';
 import {shallow, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import offenceData from './offenceData'
 Enzyme.configure({ adapter: new Adapter() });
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -17,4 +18,8 @@ test('routes render without crashing', () => {
 
 test('menu appears on hover to left of screen', () => {
   
+});
+
+test('sortData returns an array', () => {
+  const wrapper = shallow(<App />); wrapper.instance().sortDataByYear()
 });

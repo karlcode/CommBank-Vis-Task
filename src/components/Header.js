@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import ReactGridLayout from 'react-grid-layout';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
@@ -10,7 +9,11 @@ class Header extends Component {
     super(props);
     this.state = {value: 1};
     }
-    handleChange = (event, index, value) => this.setState({value});
+    handleChange = (event, index, value) => {
+        console.log(event)
+        console.log(index)
+        console.log(value)
+    }
     render() {
         return (
         <div>
