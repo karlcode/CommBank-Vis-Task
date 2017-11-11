@@ -5,28 +5,29 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
+  background-color: #E5E5E7;
 }
 
 
 .App-header {
-  background-color: #222;
-  height: 50px;
+  height: 60px;
   padding: 20px;
-  color: white;
+  
+
+}
+.sideTitle {
+  margin-top: 100px;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1;
+  color: rgba(42, 42, 42, 0.85);
+  font-size: 70px;
+  font-weight: 600;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -74,7 +75,7 @@
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-
-.barChart {
-  background-color: beige;
+.card {
+  background-color: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }

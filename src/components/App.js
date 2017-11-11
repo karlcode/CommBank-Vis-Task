@@ -21,15 +21,12 @@ class App extends Component {
           <Link to="/scatterplot">ScatterPlot</Link>
           </LeftMenu>
           <div id="page-wrap">
-
+            <h2 className="sideTitle">Charts</h2>
             <header className="App-header">
-              <h1 className="App-title">Sydney Trains Offences 2013-2014</h1>
+              
             </header>
             <Route exact path="/" render={()=><Chart data={offenceData}/>} />
             <Route path="/scatterplot" component={ScatterPlot}/>
-            <p className="App-intro">
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
           </div>
         </div>
       </Router>

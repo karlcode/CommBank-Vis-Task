@@ -17,7 +17,7 @@ class BarGraph extends Component {
         <Stack data={this.props.data} margin={{top: 5, right: 30, left: 30, bottom: 5}}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="offence" />
-          <YAxis dataKey="fv"> 
+          <YAxis dataKey="fv" tickCount={10}> 
             <Label value="Face Value ($)" position="insideLeft" angle="-90" offset={-20} />
           </YAxis>
           <Tooltip />
