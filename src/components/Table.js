@@ -12,38 +12,19 @@ const Table = (props) => {
           data={props.data}
           columns={[
             {
-              Header: "Name",
+              Header: "Offences for 2013",
               columns: [
                 {
-                  Header: "First Name",
-                  accessor: "firstName"
+                  Header: "Offences",
+                  accessor: "offence"
                 },
                 {
-                  Header: "Last Name",
-                  id: "lastName",
-                  accessor: d => d.lastName
-                }
-              ]
-            },
-            {
-              Header: "Info",
-              columns: [
-                {
-                  Header: "Age",
-                  accessor: "age"
+                  Header: "# of Infringements",
+                  accessor: "penalties"
                 },
                 {
-                  Header: "Status",
-                  accessor: "status"
-                }
-              ]
-            },
-            {
-              Header: 'Stats',
-              columns: [
-                {
-                  Header: "Visits",
-                  accessor: "visits"
+                  Header: "Face Value ($)",
+                  accessor: "fv"
                 }
               ]
             }
