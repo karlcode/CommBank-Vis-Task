@@ -12,9 +12,13 @@ test('renders Header without crashing', () => {
   render(<Header />, div);
 });
 
-
-test('should dispatch action on click of dropdown', () => {
-  
+describe('onChange', () => {
+  test('should dispatch action on click of dropdown', () => {
+    
+  });
+  test('should mutate state', () => {
+    
+  });
 });
 
 

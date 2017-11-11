@@ -8,7 +8,7 @@ const BarGraph = (props) => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="offence" />
         <YAxis dataKey="fv" tickCount={10}> 
-          <Label value="Face Value ($)" position="insideLeft" angle="-90" offset={-20} />
+          <Label value="Face Value ($)" position="insideLeft" angle={-90} offset={-20} />
         </YAxis>
         <Tooltip />
         <Legend />
