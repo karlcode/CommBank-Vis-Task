@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Chart from './Chart';
-import ScatterPlot from './ScatterPlot';
 import { scaleRotate as LeftMenu } from 'react-burger-menu';
 import offenceData from './offenceData';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
