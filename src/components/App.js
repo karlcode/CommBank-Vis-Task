@@ -17,6 +17,13 @@ import {
 const store = createStore(reducer)
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data2013: offenceData.data2013
+    };
+  }
   render() {
     return (
       <Provider store={store}>
@@ -31,8 +38,8 @@ class App extends Component {
             <header className="App-header">
             <Header/>
             </header>
-            <Route exact path="/" render={()=><Chart data={offenceData.data2013}/>} />
-            <Route path="/datasheet" render={()=><DataSheet data={offenceData.data2013}/>} />
+            <Route exact path="/" render={()=><Chart data={this.state.data2013}/>} />
+            <Route path="/datasheet" render={()=><DataSheet data={this.state.data2013}/>} />
           </div>
         </div>
       </Router>
@@ -42,3 +49,4 @@ class App extends Component {
 }
 
 export default App;
+

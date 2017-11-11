@@ -5,7 +5,7 @@ import Table from './Table';
 
 const DataSheet = (props) => {
   var layout = [
-    {i: 'table', x: 1, y: 0, w: 7, h: 1.5},
+    {i: 'table', x: 1, y: 0, w: 10, h: 1.5},
     {i: 'pie', x: 9, y: 0, w: 4, h: 1.5},
     {i: 'third', x: 9, y: 0, w: 4, h: 1},
   ];
