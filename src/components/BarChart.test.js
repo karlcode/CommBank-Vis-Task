@@ -12,24 +12,7 @@ test('renders BarChart without crashing', () => {
   render(<BarChart />, div);
 });
 
-test('should show figures on hover of node', () => {
-  
-});
-
-test('should accept an array of data points', () => {
-  
-});
 
 test('should show new chart on click of node', () => {
   
-});
-
-test('plotFaceValue should return an array', () => {
-  const wrapper = shallow(<BarChart/>)
-  expect(wrapper.instance().plotFaceValue()).toBeDefined()
-});
-
-test('penalties should return an array', () => {
-  const wrapper = shallow(<BarChart/>)
-  expect(wrapper.instance().plotPenalties()).toBeDefined()
 });

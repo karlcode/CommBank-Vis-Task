@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App" id="outer-container">
-          <LeftMenu noOverlay pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+          <LeftMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
           <Link to="/">Home</Link>
           <Link to="/scatterplot">ScatterPlot</Link>
           </LeftMenu>
