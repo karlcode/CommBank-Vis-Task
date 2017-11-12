@@ -16,8 +16,8 @@ class Filters extends Component{
       <div>
         <MuiThemeProvider >
         <DropDownMenu value={this.props.category} onChange={(this.changeCategory)} labelStyle={{ backgroundColor: 'white' }}>
-        <MenuItem value={1} primaryText="Number of Penalties" />
-        <MenuItem value={2} primaryText="Face Value ($)" />
+        <MenuItem value={"Penalties"} primaryText="Number of Penalties" />
+        <MenuItem value={"Face Value"} primaryText="Face Value ($)" />
         </DropDownMenu>
         </MuiThemeProvider>
         <MuiThemeProvider >

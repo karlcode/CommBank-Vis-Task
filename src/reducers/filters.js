@@ -1,12 +1,11 @@
 const initialState = {
     year: 'All',
-    category: 1
+    category: 'Penalties'
 }
 
 function filters(state = initialState, action) {
     switch (action.type) {
       case 'CHANGE_TIME':
-        console.log(action)
         return {
             ...state, 
             year: action.year

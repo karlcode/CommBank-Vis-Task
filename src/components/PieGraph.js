@@ -9,7 +9,7 @@ const PieGraph = (props) => {
         <PieChart>
           <Legend align="right" height={36} value="fv" dataKey="offence"/>
           <Pie data={props.data} dataKey="fv" nameKey="name"  fill="#8884d8">
-          {
+          //{
             props.data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={colors[index]}/>
             ))

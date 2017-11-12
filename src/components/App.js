@@ -15,6 +15,26 @@ import {
 } from 'react-router-dom';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataset: props
+    };
+  }
+  fetchData(){
+    switch (this.props.year) {
+      case 2013:
+        return offenceData.data2013
+      case 2014:
+        return offenceData.data2014
+      default:
+        return offenceData.data2014
+    }
+  }
+  componentWillReceiveProps(nextProps){
+    console.log(this.props)
+
+  }
   render() {
     return (
       <Router>
@@ -24,12 +44,12 @@ class App extends Component {
           <Link to="/datasheet" style={{ textDecoration: 'none' }}><div className="cards">Tables</div></Link>
           </LeftMenu>
           <div id="page-wrap">
-            <h2 className="sideTitle">Charts</h2>
+            <h2 className="sideTitle">{this.props.category} - {this.props.year}</h2>
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={offenceData.data2013}/>} />
-            <Route path="/datasheet" render={()=><DataSheet data={offenceData.data2013}/>} />
+            <Route exact path="/" render={()=><Chart data={this.fetchData()}/>} />
+            <Route path="/datasheet" render={()=><DataSheet data={this.fetchData()}/>} />
           </div>
         </div>
       </Router>
@@ -38,8 +58,12 @@ class App extends Component {
 }
 
 
-const mapStateToProps = (state) => {
-  return state
-};
+function mapStateToProps(state) {
+  const map = { 
+      year: state.filters.year,
+      category: state.filters.category
+   };
+  return map;
+}
 
 export default connect(mapStateToProps)(App);
