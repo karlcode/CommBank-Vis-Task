@@ -6,13 +6,16 @@ import MenuItem from 'material-ui/MenuItem';
 
 class Filters extends Component{
   changeTime = (event, index, value) => {
-
+    this.props.changeTime(value)
+  }
+  changeCategory = (event, index, value) => {
+    this.props.changeCategory(value)
   }
   render(){
     return (
       <div>
         <MuiThemeProvider >
-        <DropDownMenu value={this.props.category} onChange={(this.handleChange)} labelStyle={{ backgroundColor: 'white' }}>
+        <DropDownMenu value={this.props.category} onChange={(this.changeCategory)} labelStyle={{ backgroundColor: 'white' }}>
         <MenuItem value={1} primaryText="Number of Penalties" />
         <MenuItem value={2} primaryText="Face Value ($)" />
         </DropDownMenu>

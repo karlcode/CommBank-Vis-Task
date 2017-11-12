@@ -13,10 +13,10 @@ test('renders Header without crashing', () => {
 });
 
 describe('onChange', () => {
-  test('should dispatch action on click of dropdown', () => {
+  test('changetime should update the year', () => {
     
   });
-  test('should mutate state', () => {
+  test('changecategory should update categories', () => {
     
   });
 });
