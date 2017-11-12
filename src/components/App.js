@@ -5,6 +5,7 @@ import DataSheet from './DataSheet';
 import { connect } from 'react-redux'
 import { scaleRotate as LeftMenu } from 'react-burger-menu';
 import offenceData from './offenceData';
+import offenceTotal from './offenceTotal';
 import ChangeFilters from '../containers/ChangeFilters';
 import {
   BrowserRouter as Router,
@@ -51,7 +52,7 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={this.state.dataset}/>} />
+            <Route exact path="/" render={()=><Chart data={offenceTotal}/>} />
             <Route path="/datasheet" render={()=><DataSheet data={this.state.dataset}/>} />
           </div>
         </div>
