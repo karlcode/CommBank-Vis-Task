@@ -22,9 +22,9 @@ class Filters extends Component{
         </MuiThemeProvider>
         <MuiThemeProvider >
         <DropDownMenu value={this.props.year} onChange={this.changeTime} labelStyle={{ backgroundColor: 'white' }}>
-        <MenuItem value={1} primaryText="All Years" />
-        <MenuItem value={2} primaryText="2013" />
-        <MenuItem value={3} primaryText="2014" />
+        <MenuItem value={'All'} primaryText="All Years" />
+        <MenuItem value={'2013'} primaryText="2013" />
+        <MenuItem value={'2014'} primaryText="2014" />
         </DropDownMenu>
         </MuiThemeProvider>
       </div>
