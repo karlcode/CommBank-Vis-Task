@@ -16,7 +16,7 @@ const Chart = (props) => {
     <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
     <div className="card" key="bar">
       <h4>Face Value of Penalties - 2013</h4>
-      <BarGraph data={props.data}/>
+      <BarGraph data={props.data} y={props.y} childVisible={props.childVisible} />
     </div>
     <div className="card" key="pie">
       <h4>FV Percentages</h4>

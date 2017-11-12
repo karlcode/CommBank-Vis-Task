@@ -14,10 +14,10 @@ import {
 } from 'react-router-dom';
 
 let data2013 = offenceTotal.map(key => ({
-  offence: key.offence, short: key.short, penalties: key.penalties2013, fv: key.fv2013
+  offence: key.offence, short: key.short, penalties: key.penalties2013, fv: key.fv2013, average: (key.fv2013/key.penalties2013).toFixed(2)
 }))
 let data2014 = offenceTotal.map(key => ({
-  offence: key.offence, short: key.short, penalties: key.penalties2014, fv: key.fv2014
+  offence: key.offence, short: key.short, penalties: key.penalties2014, fv: key.fv2014, average: (key.fv2014/key.penalties2014).toFixed(2)
 }))
 
 class App extends Component {
@@ -25,6 +25,7 @@ class App extends Component {
     super(props);
     this.state = {
       dataset: data2014,
+      childVisible: false,
       x: 'short',
       y: 'penalties'
     }
@@ -34,20 +35,37 @@ class App extends Component {
     if (this.props !== nextProps){
       switch (nextProps.year){
         case '2013': 
-        this.setState({dataset: data2013})
+        this.setState({dataset: data2013, childVisible: false})
         break;
         case '2014':
-        this.setState({dataset: data2014})
+        this.setState({dataset: data2014, childVisible: false})
         break;
         case 'All':
-        this.setState({dataset: offenceTotal})
+        if(nextProps.category == 'Penalties'){
+          this.setState({dataset: offenceTotal, childVisible: true})
+        }
+        else if (nextProps.category == 'Face Value'){
+          this.setState({dataset: offenceTotal, childVisible: true})
+        }
         break;
         default: 
         alert('Invalid option')
       }
-    }
+      switch (nextProps.category){
+        case 'Penalties': 
+        this.setState({y: 'penalties'})
+        break;
+        case 'Face Value':
+        this.setState({y: 'fv'})
+        break;
+        default: 
+        alert('Invalid option')
+      }
+      
+    }  
   }
   render() {
+    let chart = {data: this.state.datasheet, childVisible: this.state.childVisible, x: this.state}
     return (
       <Router>
         <div className="App" id="outer-container">
@@ -60,7 +78,7 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={this.state.dataset}/>} />
+            <Route exact path="/" render={()=><Chart data={this.state.dataset} childVisible={this.state.childVisible} y={this.state.y}/>} />
             <Route path="/datasheet" render={()=><DataSheet data={this.state.dataset}/>} />
           </div>
         </div>

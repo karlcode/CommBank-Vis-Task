@@ -23,6 +23,10 @@ const Table = (props) => {
                 {
                   Header: "Face Value ($)",
                   accessor: "fv"
+                },
+                {
+                  Header: "Average $ Per PN",
+                  accessor: "average"
                 }
               ]
             }
