@@ -33,6 +33,11 @@ class App extends Component {
 
   componentWillReceiveProps(nextProps){
     if (this.props !== nextProps){
+      if (nextProps.category == 'Face Value'){
+        this.setState({y: 'fv'})
+      } else if (nextProps.category == "Penalties"){
+        this.setState({y: 'penalties'})
+      }
       switch (nextProps.year){
         case '2013': 
         this.setState({dataset: data2013, childVisible: false})
@@ -42,30 +47,18 @@ class App extends Component {
         break;
         case 'All':
         if(nextProps.category == 'Penalties'){
-          this.setState({dataset: offenceTotal, childVisible: true})
+          this.setState({dataset: offenceTotal, childVisible: true, y: 'penalties2013', y2: 'penalties2014'})
         }
         else if (nextProps.category == 'Face Value'){
-          this.setState({dataset: offenceTotal, childVisible: true})
+          this.setState({dataset: offenceTotal, childVisible: true, y: 'fv2013', y2: 'fv2014'})
         }
         break;
         default: 
         alert('Invalid option')
-      }
-      switch (nextProps.category){
-        case 'Penalties': 
-        this.setState({y: 'penalties'})
-        break;
-        case 'Face Value':
-        this.setState({y: 'fv'})
-        break;
-        default: 
-        alert('Invalid option')
-      }
-      
+        }
     }  
   }
   render() {
-    let chart = {data: this.state.datasheet, childVisible: this.state.childVisible, x: this.state}
     return (
       <Router>
         <div className="App" id="outer-container">
@@ -78,7 +71,7 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={this.state.dataset} childVisible={this.state.childVisible} y={this.state.y}/>} />
+            <Route exact path="/" render={()=><Chart data={this.state.dataset} childVisible={this.state.childVisible} y={this.state.y} y2={this.state.y2}/>} />
             <Route path="/datasheet" render={()=><DataSheet data={this.state.dataset}/>} />
           </div>
         </div>

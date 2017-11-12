@@ -14,6 +14,7 @@ const mapDispatchToProps = (dispatch) => ({
       dispatch({
           type: 'CHANGE_TIME',
           year
+
       })
     },
     changeCategory: (category)=>{

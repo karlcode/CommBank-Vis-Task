@@ -16,7 +16,7 @@ const BarGraph = (props) => {
         <Bar dataKey={props.y} name="2013" fill="#8884d8" />
         {
           props.childVisible
-            ? <Bar dataKey="fv2014" name="2014" fill="#8884d8" />
+            ? <Bar dataKey={props.y2} name="2014" fill="#8884d8" />
             : null
         }
       </Stack>
