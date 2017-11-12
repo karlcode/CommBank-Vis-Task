@@ -3,31 +3,20 @@ import './App.css';
 import Chart from './Chart';
 import DataSheet from './DataSheet';
 import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+import { connect } from 'react-redux'
 import { scaleRotate as LeftMenu } from 'react-burger-menu';
 import offenceData from './offenceData';
 import Filters from './Filters';
 import ChangeFilters from '../containers/ChangeFilters'
-import reducer from '../reducers'
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      data: offenceData.data2013
-    };
-  }
   render() {
     return (
-      <Provider store={store}>
       <Router>
         <div className="App" id="outer-container">
           <LeftMenu className="menu" pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
@@ -39,15 +28,18 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={this.state.data}/>} />
-            <Route path="/datasheet" render={()=><DataSheet data={this.state.data}/>} />
+            <Route exact path="/" render={()=><Chart data={offenceData.data2013}/>} />
+            <Route path="/datasheet" render={()=><DataSheet data={offenceData.data2013}/>} />
           </div>
         </div>
       </Router>
-      </Provider>
     );
   }
 }
 
-export default App;
 
+const mapStateToProps = (state) => {
+  return state
+};
+
+export default connect(mapStateToProps)(App);
