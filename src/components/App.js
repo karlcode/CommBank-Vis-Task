@@ -5,7 +5,7 @@ import DataSheet from './DataSheet';
 import { connect } from 'react-redux'
 import { scaleRotate as LeftMenu } from 'react-burger-menu';
 import offenceData from './offenceData';
-import ChangeFilters from '../containers/ChangeFilters'
+import ChangeFilters from '../containers/ChangeFilters';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,14 +16,26 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataset: offenceData.data2013
+      dataset: offenceData.data2014
     }
   }
 
   componentWillReceiveProps(nextProps){
+    var all = offenceData.data2013.concat(offenceData.data2014)
     if (this.props !== nextProps){
-      console.log(nextProps.year);
-      this.setState({dataset: offenceData})
+      switch (nextProps.year){
+        case '2013': 
+        this.setState({dataset: offenceData.data2013})
+        break;
+        case '2014':
+        this.setState({dataset: offenceData.data2014})
+        break;
+        case 'All':
+        this.setState({dataset: offenceData.data2013.concat(offenceData.data2014)})
+        break;
+        default: 
+        alert('Invalid option')
+      }
     }
   }
   render() {

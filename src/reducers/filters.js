@@ -1,5 +1,5 @@
 const initialState = {
-    year: 'All',
+    year: '2014',
     category: 'Penalties'
 }
 

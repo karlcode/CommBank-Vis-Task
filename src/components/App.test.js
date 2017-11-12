@@ -20,6 +20,6 @@ test('menu appears on hover to left of screen', () => {
   
 });
 
-test('sortData returns an array', () => {
-  const wrapper = shallow(<App />); wrapper.instance().sortDataByYear()
+test('componentWIllReceiveProps sets a dataset as state', () => {
+  
 });
