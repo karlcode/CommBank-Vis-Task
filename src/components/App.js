@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Chart from './Chart';
 import DataSheet from './DataSheet';
-import { createStore } from 'redux'
 import { connect } from 'react-redux'
 import { scaleRotate as LeftMenu } from 'react-burger-menu';
 import offenceData from './offenceData';
-import Filters from './Filters';
 import ChangeFilters from '../containers/ChangeFilters'
 import {
   BrowserRouter as Router,
@@ -18,22 +16,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataset: props
-    };
-  }
-  fetchData(){
-    switch (this.props.year) {
-      case 2013:
-        return offenceData.data2013
-      case 2014:
-        return offenceData.data2014
-      default:
-        return offenceData.data2014
+      dataset: offenceData.data2013
     }
   }
-  componentWillReceiveProps(nextProps){
-    console.log(this.props)
 
+  componentWillReceiveProps(nextProps){
+    if (this.props !== nextProps){
+      console.log(nextProps.year);
+      this.setState({dataset: offenceData})
+    }
   }
   render() {
     return (
@@ -48,8 +39,8 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={this.fetchData()}/>} />
-            <Route path="/datasheet" render={()=><DataSheet data={this.fetchData()}/>} />
+            <Route exact path="/" render={()=><Chart data={this.state.dataset}/>} />
+            <Route path="/datasheet" render={()=><DataSheet data={this.state.dataset}/>} />
           </div>
         </div>
       </Router>

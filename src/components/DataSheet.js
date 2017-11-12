@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import ReactGridLayout from 'react-grid-layout';
 import Table from './Table';

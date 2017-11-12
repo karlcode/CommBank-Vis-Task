@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import './Table.css';
-import ReactGridLayout from 'react-grid-layout';
-import offenceData from './offenceData'
 import ReactTable from "react-table";
 
 const Table = (props) => {
