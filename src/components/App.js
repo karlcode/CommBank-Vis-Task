@@ -13,11 +13,20 @@ import {
   Link
 } from 'react-router-dom';
 
+let data2013 = offenceTotal.map(key => ({
+  offence: key.offence, short: key.short, penalties: key.penalties2013, fv: key.fv2013
+}))
+let data2014 = offenceTotal.map(key => ({
+  offence: key.offence, short: key.short, penalties: key.penalties2014, fv: key.fv2014
+}))
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataset: offenceData.data2014
+      dataset: data2014,
+      x: 'short',
+      y: 'penalties'
     }
   }
 
@@ -25,20 +34,13 @@ class App extends Component {
     if (this.props !== nextProps){
       switch (nextProps.year){
         case '2013': 
-        let data2013 = offenceTotal.map(key => ({
-          offence: key.offence, short: key.short, penalties: key.penalties2013, fv: key.fv2013
-        }))
-        console.log(data2013)
         this.setState({dataset: data2013})
         break;
         case '2014':
-        let data2014 = offenceTotal.map(key => ({
-          offence: key.offence, short: key.short, penalties: key.penalties2014, fv: key.fv2014
-        }))
         this.setState({dataset: data2014})
         break;
         case 'All':
-        this.setState({dataset: offenceData.data2013.concat(offenceData.data2014)})
+        this.setState({dataset: offenceTotal})
         break;
         default: 
         alert('Invalid option')

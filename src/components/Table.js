@@ -18,11 +18,11 @@ const Table = (props) => {
                 },
                 {
                   Header: "# of Infringements",
-                  accessor: "penalties2013"
+                  accessor: "penalties"
                 },
                 {
                   Header: "Face Value ($)",
-                  accessor: "fv2013"
+                  accessor: "fv"
                 }
               ]
             }
