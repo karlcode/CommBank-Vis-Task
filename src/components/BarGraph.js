@@ -7,12 +7,12 @@ const BarGraph = (props) => {
       <Stack data={props.data} margin={{top: 5, right: 30, left: 30, bottom: 5}}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="short" type="category"/>
-        <YAxis dataKey="fv2013" tickCount={10}> 
+        <YAxis dataKey="fv" tickCount={10}> 
           <Label value="Face Value ($)" position="insideLeft" angle={-90} offset={-20} />
         </YAxis>
         <Tooltip />
         <Legend />
-        <Bar dataKey="fv2013" fill="#8884d8" />
+        <Bar dataKey="fv" fill="#8884d8" />
       </Stack>
       </ResponsiveContainer>
   );

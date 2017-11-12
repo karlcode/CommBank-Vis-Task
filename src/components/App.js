@@ -22,14 +22,20 @@ class App extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    var all = offenceData.data2013.concat(offenceData.data2014)
     if (this.props !== nextProps){
       switch (nextProps.year){
         case '2013': 
-        this.setState({dataset: offenceData.data2013})
+        let data2013 = offenceTotal.map(key => ({
+          offence: key.offence, short: key.short, penalties: key.penalties2013, fv: key.fv2013
+        }))
+        console.log(data2013)
+        this.setState({dataset: data2013})
         break;
         case '2014':
-        this.setState({dataset: offenceData.data2014})
+        let data2014 = offenceTotal.map(key => ({
+          offence: key.offence, short: key.short, penalties: key.penalties2014, fv: key.fv2014
+        }))
+        this.setState({dataset: data2014})
         break;
         case 'All':
         this.setState({dataset: offenceData.data2013.concat(offenceData.data2014)})
@@ -52,7 +58,7 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={offenceTotal}/>} />
+            <Route exact path="/" render={()=><Chart data={this.state.dataset}/>} />
             <Route path="/datasheet" render={()=><DataSheet data={this.state.dataset}/>} />
           </div>
         </div>
