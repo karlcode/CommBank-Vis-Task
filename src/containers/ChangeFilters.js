@@ -2,14 +2,15 @@ import { connect } from 'react-redux'
 import Filters from '../components/Filters'
 
 const mapStateToProps = (state) => ({
-    text: "HI"
+    category: 1,
+    year: 1
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    changeTime: () => {
+    changeTime: (year) => {
       dispatch({
           type: 'CHANGE_TIME',
-          text: '2013'
+          year
       })
     }
   })

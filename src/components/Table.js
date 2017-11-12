@@ -29,7 +29,7 @@ const Table = (props) => {
               ]
             }
           ]}
-          defaultPageSize={10}
+          defaultPageSize={8}
           className="-striped -highlight"
         />
     </div>

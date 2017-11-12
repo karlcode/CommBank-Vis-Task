@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import header from './header'
+import filters from './filters'
 
 const reducer = combineReducers({
-header
+filters
 })
 
 export default reducer

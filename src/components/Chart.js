@@ -4,6 +4,7 @@ import ReactGridLayout from 'react-grid-layout';
 import BarGraph from './BarGraph'
 import PieGraph from './PieGraph'
 import ScatterPlot from './ScatterPlot'
+import Table from './Table'
 
 const Chart = (props) => {
   var layout = [
@@ -22,8 +23,7 @@ const Chart = (props) => {
       <PieGraph data={props.data}/>
     </div>
     <div className="card" key="third">
-      <h3>Face Value Vs Num of Penalties</h3>
-      <ScatterPlot data={props.data}/>
+      <Table data={props.data}/>
     </div>
     </ReactGridLayout>
   );

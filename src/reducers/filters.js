@@ -1,7 +1,7 @@
-const filters = (state = "hi", action) => {
+const filters = (state = [], action) => {
     switch (action.type) {
-      case 'CHANGE_YEAR':
-        return action
+      case 'CHANGE_TIME':
+        return action.year
       
       default:
         return state
