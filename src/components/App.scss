@@ -15,7 +15,6 @@
 .App-header {
   height: 60px;
   padding: 20px;
-  text-align: right;
 
 }
 .sideTitle {
@@ -114,4 +113,8 @@
 .cards:hover{
   background-color:#F8D6A6;
   transition: all 0.5s;
+}
+
+.filter__element {
+  padding-right: 20px;
 }
