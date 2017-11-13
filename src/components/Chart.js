@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ReactGridLayout from 'react-grid-layout';
+import {connect} from 'react-redux'
 import BarGraph from './BarGraph'
 import PieGraph from './PieGraph'
 import ScatterPlot from './ScatterPlot'
@@ -15,19 +16,26 @@ const Chart = (props) => {
   return (
     <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
     <div className="card" key="bar">
-      <h4>Face Value of Penalties - 2013</h4>
-      <BarGraph data={props.data} y={props.y}  y2={props.y2} />
+      <h4>{props.category} vs Sydney Trains Offences for {props.year}</h4>
+      <BarGraph {...props} />
     </div>
     <div className="card" key="pie">
       <h4>FV Percentages</h4>
-      <PieGraph data={props.data}/>
+      <PieGraph {...props}/>
     </div>
     <div className="card" key="third">
-      <Table data={props.data} y={props.y}  y2={props.y2}/>
+      <Table {...props}/>
     </div>
     </ReactGridLayout>
   );
 }
 
+function mapStateToProps(state) {
+  const map = { 
+      year: state.filters.year,
+      category: state.filters.category
+   };
+  return map;
+}
 
-export default Chart;
+export default connect(mapStateToProps)(Chart);

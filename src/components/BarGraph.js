@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import {ResponsiveContainer, BarChart as Stack, Bar, Label, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+
 const BarGraph = (props) => {
   console.log(props)
   return (
@@ -9,14 +10,14 @@ const BarGraph = (props) => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="short" type="category"/>
         <YAxis dataKey={props.y} tickCount={10}> 
-          <Label value="Face Value ($)" position="insideLeft" angle={-90} offset={-20} />
+          <Label value={props.category} position="insideLeft" angle={-90} offset={-20} />
         </YAxis>
         <Tooltip />
         <Legend />
-        <Bar dataKey={props.y} name="2013" fill="#8884d8" />
+        <Bar dataKey={props.y} name={props.year=='All'?'2013':props.year} fill="#595BD4" />
         {
-          props.y2
-            ? <Bar dataKey={props.y2} name="2014" fill="#8884d8" />
+          props.showAll
+            ? <Bar dataKey={props.y2} name="2014" fill="#FF6665" />
             : null
         }
       </Stack>
