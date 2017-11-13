@@ -4,7 +4,7 @@ import App from './App';
 import Enzyme from 'enzyme';
 import {shallow, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import offenceData from './offenceData'
+import offenceData from './offenceData';
 Enzyme.configure({ adapter: new Adapter() });
 it('renders without crashing', () => {
   const div = document.createElement('div');

@@ -1,5 +1,5 @@
-import { connect } from 'react-redux'
-import Filters from '../components/Filters'
+import { connect } from 'react-redux';
+import Filters from '../components/Filters';
 
 function mapStateToProps(state) {
     const map = { 

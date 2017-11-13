@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Route,

@@ -3,6 +3,7 @@ import '../styles/App.css';
 import ReactGridLayout from 'react-grid-layout';
 import Table from './Table';
 import {Responsive, WidthProvider} from 'react-grid-layout';
+
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 const DataSheet = (props) => {
