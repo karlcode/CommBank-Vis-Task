@@ -15,7 +15,7 @@ const BarGraph = (props) => {
         <Legend />
         <Bar dataKey={props.y} name="2013" fill="#8884d8" />
         {
-          props.childVisible
+          props.y2
             ? <Bar dataKey={props.y2} name="2014" fill="#8884d8" />
             : null
         }

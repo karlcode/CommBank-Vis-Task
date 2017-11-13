@@ -16,14 +16,14 @@ const Chart = (props) => {
     <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
     <div className="card" key="bar">
       <h4>Face Value of Penalties - 2013</h4>
-      <BarGraph data={props.data} y={props.y} childVisible={props.childVisible} y2={props.y2} />
+      <BarGraph data={props.data} y={props.y}  y2={props.y2} />
     </div>
     <div className="card" key="pie">
       <h4>FV Percentages</h4>
       <PieGraph data={props.data}/>
     </div>
     <div className="card" key="third">
-      <Table data={props.data}/>
+      <Table data={props.data} y={props.y}  y2={props.y2}/>
     </div>
     </ReactGridLayout>
   );

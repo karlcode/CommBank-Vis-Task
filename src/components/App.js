@@ -1,62 +1,40 @@
 import React, { Component } from 'react';
 import './App.css';
-import Chart from './Chart';
-import DataSheet from './DataSheet';
 import { connect } from 'react-redux'
-import { scaleRotate as LeftMenu } from 'react-burger-menu';
-import offenceData from './offenceData';
-import offenceTotal from './offenceTotal';
-import ChangeFilters from '../containers/ChangeFilters';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
-
-let data2013 = offenceTotal.map(key => ({
-  offence: key.offence, short: key.short, penalties: key.penalties2013, fv: key.fv2013, average: (key.fv2013/key.penalties2013).toFixed(2)
-}))
-let data2014 = offenceTotal.map(key => ({
-  offence: key.offence, short: key.short, penalties: key.penalties2014, fv: key.fv2014, average: (key.fv2014/key.penalties2014).toFixed(2)
-}))
+import { scaleRotate as LeftMenu } from 'react-burger-menu';
+import ChangeFilters from '../containers/ChangeFilters';
+import Chart from './Chart';
+import DataSheet from './DataSheet';
+import offenceTotal from './offenceTotal';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataset: data2014,
-      childVisible: false,
-      x: 'short',
-      y: 'penalties'
+      y: 'penalties2014',
+      y2: ''
     }
   }
 
   componentWillReceiveProps(nextProps){
-    if (this.props !== nextProps){
-      if (nextProps.category == 'Face Value'){
-        this.setState({y: 'fv'})
-      } else if (nextProps.category == "Penalties"){
-        this.setState({y: 'penalties'})
-      }
-      switch (nextProps.year){
-        case '2013': 
-        this.setState({dataset: data2013, childVisible: false})
-        break;
-        case '2014':
-        this.setState({dataset: data2014, childVisible: false})
-        break;
-        case 'All':
-        if(nextProps.category == 'Penalties'){
-          this.setState({dataset: offenceTotal, childVisible: true, y: 'penalties2013', y2: 'penalties2014'})
-        }
-        else if (nextProps.category == 'Face Value'){
-          this.setState({dataset: offenceTotal, childVisible: true, y: 'fv2013', y2: 'fv2014'})
-        }
-        break;
-        default: 
-        alert('Invalid option')
-        }
-    }  
+    switch(nextProps.category){
+      case 'Penalties':
+      if(nextProps.year == 'All'){
+        return this.setState({y: 'penalties2013', y2: 'penalties2014'})
+      }else return this.setState({y: `penalties${nextProps.year}`, y2: ''})
+      break;
+      case 'Face Value ($)':
+      if(nextProps.year == 'All'){
+        return this.setState({y: 'penalties2013', y2: 'penalties2014'})
+      }else return this.setState({y: `fv${nextProps.year}`, y2: ''})
+      break;
+      default: alert('Invalid Input')
+    }
   }
   render() {
     return (
@@ -71,8 +49,8 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={this.state.dataset} childVisible={this.state.childVisible} y={this.state.y} y2={this.state.y2}/>} />
-            <Route path="/datasheet" render={()=><DataSheet data={this.state.dataset}/>} />
+            <Route exact path="/" render={()=><Chart data={offenceTotal} y={this.state.y} y2={this.state.y2}/>} />
+            <Route path="/datasheet" render={()=><DataSheet data={offenceTotal}/>} />
           </div>
         </div>
       </Router>
