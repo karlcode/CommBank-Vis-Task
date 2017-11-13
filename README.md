@@ -1,8 +1,17 @@
-## CommBank Data Visualisation Assignment
+# CommBank Data Visualisation Assignment
 
 http://commbank-vis.surge.sh/
 
 This is a charting project made in React for the Data Visualisation team at CommBank.
+
+### Installation
+
+Clone or download this repo, then:
+```sh
+npm install
+npm start
+```
+to run the development server
 
 ### Tools Used
 
@@ -21,4 +30,3 @@ Due to time constraints, I could not fully explore the possibility of including 
 Thanks for reading :)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
