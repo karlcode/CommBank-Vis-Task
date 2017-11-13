@@ -2,17 +2,28 @@ import React from 'react';
 import './App.css';
 import ReactGridLayout from 'react-grid-layout';
 import Table from './Table';
+import {Responsive, WidthProvider} from 'react-grid-layout';
+const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 const DataSheet = (props) => {
-  var layout = [
-    {i: 'table', x: 2, y: 0, w: 10, h: 1.5}
+  var lg = [
+    {i: 'table', x: 2, y: 0, w: 8, h: 2}
   ];
+  var md = [
+    {i: 'table', x: 2, y: 0, w: 7, h: 2}
+  ];
+  var sm = [
+    {i: 'table', x: 1, y: 0, w: 7, h: 2}
+  ];
+  var layout = {lg: lg, md: md};
   return (
-    <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
+    <ResponsiveReactGridLayout className="layout" layouts={layout} rowHeight={300}
+    cols={{lg: 12, md: 12, sm: 12, xs: 4, xxs: 2}}
+    breakpoints={{lg: 1900, md: 1600, sm: 1200, xs: 900, xxs: 0}}>
     <div className="card" key="table">
       <Table data={props.data}/>
     </div>
-    </ReactGridLayout>
+    </ResponsiveReactGridLayout>
   );
 }
 

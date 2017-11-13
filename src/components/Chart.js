@@ -1,32 +1,33 @@
 import React from 'react';
 import './App.css';
 import ReactGridLayout from 'react-grid-layout';
+import {Responsive, WidthProvider} from 'react-grid-layout';
 import {connect} from 'react-redux'
 import BarGraph from './BarGraph'
 import PieGraph from './PieGraph'
-import ScatterPlot from './ScatterPlot'
 import Table from './Table'
+import layout from './layout.js'
+
+const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 const Chart = (props) => {
-  var layout = [
-    {i: 'bar', x: 1, y: 0, w: 7, h: 2.5},
-    {i: 'pie', x: 9, y: 0, w: 4, h: 1},
-    {i: 'third', x: 9, y: 0, w: 4, h: 1.5},
-  ];
+
   return (
-    <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={300} width={1900} >
+    <ResponsiveReactGridLayout className="layout" layouts={layout} rowHeight={300}
+    cols={{lg: 12, md: 12, sm: 12, xs: 4, xxs: 2}}
+    breakpoints={{lg: 1900, md: 1600, sm: 1200, xs: 900, xxs: 0}}>
     <div className="card" key="bar">
       <h4>{props.category} vs Sydney Trains Offences for {props.year}</h4>
       <BarGraph {...props} />
     </div>
     <div className="card" key="pie">
-      <h4>FV Percentages</h4>
+      <h4>{props.category} distribution (%) for {props.year}</h4>
       <PieGraph {...props}/>
     </div>
-    <div className="card" key="third">
+    <div className="card" key="table">
       <Table {...props}/>
     </div>
-    </ReactGridLayout>
+    </ResponsiveReactGridLayout>
   );
 }
 
