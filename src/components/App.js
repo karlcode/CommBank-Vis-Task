@@ -17,7 +17,8 @@ class App extends Component {
     super(props);
     this.state = {
       y: 'penalties2014',
-      y2: ''
+      y2: '',
+      showAll: false
     }
   }
 
@@ -25,13 +26,13 @@ class App extends Component {
     switch(nextProps.category){
       case 'Penalties':
       if(nextProps.year == 'All'){
-        return this.setState({y: 'penalties2013', y2: 'penalties2014'})
-      }else return this.setState({y: `penalties${nextProps.year}`, y2: ''})
+        return this.setState({x: 'short', y: 'penalties2013', y2: 'penalties2014', showAll: true})
+      }else return this.setState({x: 'short', y: `penalties${nextProps.year}`, y2: '', showAll: false})
       break;
       case 'Face Value ($)':
       if(nextProps.year == 'All'){
-        return this.setState({y: 'penalties2013', y2: 'penalties2014'})
-      }else return this.setState({y: `fv${nextProps.year}`, y2: ''})
+        return this.setState({x: 'short', y: 'fv2013', y2: 'fv2014', showAll: true})
+      }else return this.setState({x: 'short', y: `fv${nextProps.year}`, y2: '', showAll: false})
       break;
       default: alert('Invalid Input')
     }
@@ -49,7 +50,7 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={offenceTotal} y={this.state.y} y2={this.state.y2}/>} />
+            <Route exact path="/" render={()=><Chart data={offenceTotal} y={this.state.y} y2={this.state.y2} showAll={this.state.showAll}/>} />
             <Route path="/datasheet" render={()=><DataSheet data={offenceTotal}/>} />
           </div>
         </div>
