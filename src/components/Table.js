@@ -18,7 +18,7 @@ const Table = (props) => {
                   accessor: "offence"
                 },
                 {
-                  Header: "# of Infringements",
+                  Header: "# of Penalties",
                   accessor: `penalties${props.year}`
                 },
                 {
@@ -27,7 +27,7 @@ const Table = (props) => {
                 },
                 {
                   Header: "Average $ Per PN",
-                  accessor: "average"
+                  accessor: `average${props.year}`
                 }
               ]
             }

@@ -21,11 +21,13 @@ class App extends Component {
       y2: '',
       showAll: false
     }
+    this.transformData(this.props.year)
   }
   transformData(year){
     for (var i = 0; i<offenceTotal.length; i++){
+      offenceTotal[i][`fvPercentage${year}`] = offenceTotal[i][`fv${year}`]/offenceTotal[i][`fv${year}Total`]
+      offenceTotal[i][`penaltiesPercentage${year}`] = offenceTotal[i][`penalties${year}`]/offenceTotal[i][`penalties${year}Total`]
       offenceTotal[i][`average${year}`] = (offenceTotal[i][`fv${year}`]/offenceTotal[i][`penalties${year}`]).toFixed(2)
-      console.log(offenceTotal[i])
     }
   }
   componentWillReceiveProps(nextProps){
@@ -65,8 +67,6 @@ class App extends Component {
     );
   }
 }
-
-
 
 function mapStateToProps(state) {
   const map = { 
