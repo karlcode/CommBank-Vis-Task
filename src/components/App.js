@@ -12,6 +12,7 @@ import Chart from './Chart';
 import DataSheet from './DataSheet';
 import offenceTotal from './offenceTotal';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,8 +22,14 @@ class App extends Component {
       showAll: false
     }
   }
-
+  transformData(year){
+    for (var i = 0; i<offenceTotal.length; i++){
+      offenceTotal[i][`average${year}`] = (offenceTotal[i][`fv${year}`]/offenceTotal[i][`penalties${year}`]).toFixed(2)
+      console.log(offenceTotal[i])
+    }
+  }
   componentWillReceiveProps(nextProps){
+    this.transformData(nextProps.year)
     switch(nextProps.category){
       case 'Penalties':
       if(nextProps.year == 'All'){
@@ -58,6 +65,7 @@ class App extends Component {
     );
   }
 }
+
 
 
 function mapStateToProps(state) {

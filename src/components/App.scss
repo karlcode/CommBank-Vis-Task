@@ -15,7 +15,7 @@
 .App-header {
   height: 60px;
   padding: 20px;
-
+  
 }
 .sideTitle {
   margin-top: 120px;
@@ -57,7 +57,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #262626;
+  background: #CECECE;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -75,7 +75,7 @@
 
 .bm-menu::-webkit-scrollbar-thumb
 {
-  background-color: #F58824;
+  background-color: #717171;
   border-radius: 50px;
 }
 /* Morph shape necessary with bubble or elastic */
@@ -111,10 +111,6 @@
   transition: all 0.5s;
 }
 .cards:hover{
-  background-color:#F8D6A6;
+  background-color:#1FC6AD;
   transition: all 0.5s;
-}
-
-.filter__element {
-  padding-left: 50px;
 }

@@ -15,13 +15,13 @@ class Filters extends Component{
     return (
       <div>
         <MuiThemeProvider >
-        <DropDownMenu className="filter__element" value={this.props.category} onChange={(this.changeCategory)} labelStyle={{ backgroundColor: 'white' }}>
+        <DropDownMenu value={this.props.category} onChange={(this.changeCategory)} labelStyle={{ backgroundColor: 'white' }}>
         <MenuItem value={"Penalties"} primaryText="Number of Penalties" />
         <MenuItem value={"Face Value ($)"} primaryText="Face Value ($)" />
         </DropDownMenu>
         </MuiThemeProvider>
         <MuiThemeProvider >
-        <DropDownMenu className="filter__element" value={this.props.year} onChange={this.changeTime} labelStyle={{ backgroundColor: 'white' }}>
+        <DropDownMenu value={this.props.year} onChange={this.changeTime} labelStyle={{ backgroundColor: 'white' }}>
         <MenuItem value={'All'} primaryText="All Years" />
         <MenuItem value={'2013'} primaryText="2013" />
         <MenuItem value={'2014'} primaryText="2014" />

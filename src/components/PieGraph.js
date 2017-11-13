@@ -15,13 +15,12 @@ const PieGraph = (props) => {
             ))
           }
           </Pie>
-          <Pie data={props.data}  cx="70%"  cy="50%"  dataKey={props.y} nameKey="name"  fill="#8884d8" label>
           {
-            props.data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index]}/>
-            ))
+          props.showAll
+            ? <Pie data={props.data}  cx="70%"  cy="50%"  dataKey={props.y2} nameKey="name"  fill="#8884d8" label/>
+            : null
           }
-          </Pie>
+          
         <Tooltip/>
         </PieChart>
         
