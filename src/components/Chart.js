@@ -3,6 +3,7 @@ import '../styles/App.css';
 import ReactGridLayout from 'react-grid-layout';
 import {Responsive, WidthProvider} from 'react-grid-layout';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import BarGraph from './BarGraph';
 import PieGraph from './PieGraph';
 import Table from './Table';
@@ -28,6 +29,13 @@ const Chart = (props) => {
     </div>
     </ResponsiveReactGridLayout>
   );
+}
+
+Chart.propTypes = {
+  category: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  data: PropTypes.array.isRequired,
+  y: PropTypes.string.isRequired,
 }
 
 function mapStateToProps(state) {
