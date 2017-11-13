@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../styles/App.css';
 import {ResponsiveContainer, BarChart as Stack, Bar, Label, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
 const BarGraph = (props) => {

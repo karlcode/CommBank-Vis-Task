@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../styles/App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';

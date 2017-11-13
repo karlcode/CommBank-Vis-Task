@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../styles/App.css';
 import ReactGridLayout from 'react-grid-layout';
 import Table from './Table';
 import {Responsive, WidthProvider} from 'react-grid-layout';
@@ -7,15 +7,15 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 const DataSheet = (props) => {
   var lg = [
-    {i: 'table', x: 2, y: 0, w: 8, h: 2}
+    {i: 'table', x: 2, y: 0, w: 8, h: 1.5, minH: 1.5, maxH: 1.5}
   ];
   var md = [
-    {i: 'table', x: 2, y: 0, w: 7, h: 2}
+    {i: 'table', x: 2, y: 0, w: 7, h: 1.5, minH: 1.5, maxH: 1.5}
   ];
   var sm = [
-    {i: 'table', x: 1, y: 0, w: 7, h: 2}
+    {i: 'table', x: 1, y: 0, w: 7, h: 1.5, minH: 1.5, maxH: 1.5}
   ];
-  var layout = {lg: lg, md: md};
+  var layout = {lg: lg, md: md, sm: sm};
   return (
     <ResponsiveReactGridLayout className="layout" layouts={layout} rowHeight={300}
     cols={{lg: 12, md: 12, sm: 12, xs: 4, xxs: 2}}

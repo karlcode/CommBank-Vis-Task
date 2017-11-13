@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
-import './Table.css';
+import '../styles/App.css';
+import '../styles/Table.css';
 import ReactTable from "react-table";
 import {connect} from "react-redux";
 
 const Table = (props) => {
   return (
     <div>
-      <ReactTable
+      <ReactTable className="-striped -highlight"
           data={props.data}
           columns={[
             {
-              Header: `Offences for ${props.year}`,
+              //Header: `Offences for ${props.year}`,
+              Header: () => <span><b>Offences for {props.year}</b></span>,
               columns: [
                 {
                   Header: "Offences",

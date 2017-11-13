@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../styles/App.css';
 import { connect } from 'react-redux'
 import {
   BrowserRouter as Router,
@@ -10,7 +10,7 @@ import { scaleRotate as LeftMenu } from 'react-burger-menu';
 import ChangeFilters from '../containers/ChangeFilters';
 import Chart from './Chart';
 import DataSheet from './DataSheet';
-import offenceTotal from './offenceTotal';
+import offenceTotal from '../utils/offenceTotal';
 
 
 class App extends Component {

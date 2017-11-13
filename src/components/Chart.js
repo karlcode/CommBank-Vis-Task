@@ -1,17 +1,16 @@
 import React from 'react';
-import './App.css';
+import '../styles/App.css';
 import ReactGridLayout from 'react-grid-layout';
 import {Responsive, WidthProvider} from 'react-grid-layout';
 import {connect} from 'react-redux'
 import BarGraph from './BarGraph'
 import PieGraph from './PieGraph'
 import Table from './Table'
-import layout from './layout.js'
+import layout from '../utils/layout.js'
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 const Chart = (props) => {
-
   return (
     <ResponsiveReactGridLayout className="layout" layouts={layout} rowHeight={300}
     cols={{lg: 12, md: 12, sm: 12, xs: 4, xxs: 2}}
