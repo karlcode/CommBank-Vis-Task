@@ -19,14 +19,16 @@ class App extends Component {
     this.state = {
       y: 'penalties2014',
       y2: '',
+      p: `penaltiesPercentage2014`,
+      p2: '',
       showAll: false
     }
     this.transformData(this.props.year)
   }
   transformData(year){
     for (var i = 0; i<offenceTotal.length; i++){
-      offenceTotal[i][`fvPercentage${year}`] = offenceTotal[i][`fv${year}`]/offenceTotal[i][`fv${year}Total`]
-      offenceTotal[i][`penaltiesPercentage${year}`] = offenceTotal[i][`penalties${year}`]/offenceTotal[i][`penalties${year}Total`]
+      offenceTotal[i][`fvPercentage${year}`] = Math.round((offenceTotal[i][`fv${year}`]/offenceTotal[i][`fv${year}Total`])* 100) / 100
+      offenceTotal[i][`penaltiesPercentage${year}`] = Math.round((offenceTotal[i][`penalties${year}`]/offenceTotal[i][`penalties${year}Total`])* 100) / 100
       offenceTotal[i][`average${year}`] = (offenceTotal[i][`fv${year}`]/offenceTotal[i][`penalties${year}`]).toFixed(2)
     }
   }
@@ -35,13 +37,13 @@ class App extends Component {
     switch(nextProps.category){
       case 'Penalties':
       if(nextProps.year == 'All'){
-        return this.setState({x: 'short', y: 'penalties2013', y2: 'penalties2014', showAll: true})
-      }else return this.setState({x: 'short', y: `penalties${nextProps.year}`, y2: '', showAll: false})
+        return this.setState({x: 'short', y: 'penalties2013', y2: 'penalties2014', showAll: true, p: `penaltiesPercentage${nextProps.year}`})
+      }else return this.setState({x: 'short', y: `penalties${nextProps.year}`, y2: '', showAll: false, p: `penaltiesPercentage${nextProps.year}`})
       break;
       case 'Face Value ($)':
       if(nextProps.year == 'All'){
-        return this.setState({x: 'short', y: 'fv2013', y2: 'fv2014', showAll: true})
-      }else return this.setState({x: 'short', y: `fv${nextProps.year}`, y2: '', showAll: false})
+        return this.setState({x: 'short', y: 'fv2013', y2: 'fv2014', showAll: true, p: `fvPercentage${nextProps.year}`})
+      }else return this.setState({x: 'short', y: `fv${nextProps.year}`, y2: '', showAll: false, p: `fvPercentage${nextProps.year}`})
       break;
       default: alert('Invalid Input')
     }
@@ -59,7 +61,7 @@ class App extends Component {
             <header className="App-header">
             <ChangeFilters/>
             </header>
-            <Route exact path="/" render={()=><Chart data={offenceTotal} y={this.state.y} y2={this.state.y2} showAll={this.state.showAll}/>} />
+            <Route exact path="/" render={()=><Chart data={offenceTotal} {...this.state}/>} />
             <Route path="/datasheet" render={()=><DataSheet data={offenceTotal}/>} />
           </div>
         </div>

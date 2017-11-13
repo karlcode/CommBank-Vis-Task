@@ -3,7 +3,6 @@ import './App.css';
 import {ResponsiveContainer, BarChart as Stack, Bar, Label, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
 const BarGraph = (props) => {
-  console.log(props)
   return (
       <ResponsiveContainer width="100%" height="80%">
       <Stack data={props.data} margin={{top: 5, right: 30, left: 30, bottom: 5}}>
