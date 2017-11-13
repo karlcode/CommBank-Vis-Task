@@ -13,7 +13,7 @@ import DataSheet from './DataSheet';
 import offenceTotal from '../utils/offenceTotal';
 
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {

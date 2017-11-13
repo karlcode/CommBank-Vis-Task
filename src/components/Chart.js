@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/App.css';
-import ReactGridLayout from 'react-grid-layout';
 import {Responsive, WidthProvider} from 'react-grid-layout';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';

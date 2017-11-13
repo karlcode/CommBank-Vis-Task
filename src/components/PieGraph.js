@@ -4,7 +4,6 @@ import {PieChart, Cell, ResponsiveContainer, Pie, Tooltip, Legend} from 'rechart
 
 const PieGraph = (props) => {
   const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF5722', '#3F51B5', '#E91E63', '#4CAF50', '#00BCD4'];
-  console.log(props);
   return (
       <ResponsiveContainer width="100%" height="80%">
         <PieChart>

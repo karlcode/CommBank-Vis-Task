@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/App.css';
-import ReactGridLayout from 'react-grid-layout';
 import Table from './Table';
 import {Responsive, WidthProvider} from 'react-grid-layout';
 
