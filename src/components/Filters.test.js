@@ -43,6 +43,10 @@ describe('<Filters/>', ()=> {
     expect(filters().find('MuiThemeProvider').length).toBe(2)
 
   });
+  test('Correct number of nested MenuItems', () => {
+    expect(filters().find('DropDownMenu').find('MenuItem').length).toBe(0);
+
+  });
 
 })
 
