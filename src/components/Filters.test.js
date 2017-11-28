@@ -35,6 +35,11 @@ describe('<Filters/>', ()=> {
     expect(component.exists()).toEqual(true);
   });
 
+  test('Should render correctly', () => {
+    const component = shallow(<Filters />);
+    expect(component).toMatchSnapshot();
+  });
+
   test('always renders 2 DropDownMenus', () => {
     expect(filters().find('DropDownMenu').length).toBe(2);
 

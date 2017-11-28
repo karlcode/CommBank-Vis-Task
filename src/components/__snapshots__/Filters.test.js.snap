@@ -1,0 +1,1275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filters/> Should render correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Filters />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <MuiThemeProvider>
+          <DropDownMenu
+                    anchorOrigin={
+                              Object {
+                                        "horizontal": "left",
+                                        "vertical": "top",
+                                      }
+                    }
+                    animated={true}
+                    autoWidth={true}
+                    disabled={false}
+                    iconButton={<NavigationArrowDropDown />}
+                    labelStyle={
+                              Object {
+                                        "backgroundColor": "white",
+                                      }
+                    }
+                    maxHeight={500}
+                    multiple={false}
+                    onChange={[Function]}
+                    openImmediately={false}
+                    value={undefined}
+          >
+                    <MenuItem
+                              anchorOrigin={
+                                        Object {
+                                                  "horizontal": "right",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              checked={false}
+                              desktop={false}
+                              disabled={false}
+                              focusState="none"
+                              insetChildren={false}
+                              primaryText="Number of Penalties"
+                              targetOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              value="Penalties"
+                    />
+                    <MenuItem
+                              anchorOrigin={
+                                        Object {
+                                                  "horizontal": "right",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              checked={false}
+                              desktop={false}
+                              disabled={false}
+                              focusState="none"
+                              insetChildren={false}
+                              primaryText="Face Value ($)"
+                              targetOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              value="Face Value ($)"
+                    />
+          </DropDownMenu>
+</MuiThemeProvider>,
+        <MuiThemeProvider>
+          <DropDownMenu
+                    anchorOrigin={
+                              Object {
+                                        "horizontal": "left",
+                                        "vertical": "top",
+                                      }
+                    }
+                    animated={true}
+                    autoWidth={true}
+                    disabled={false}
+                    iconButton={<NavigationArrowDropDown />}
+                    labelStyle={
+                              Object {
+                                        "backgroundColor": "white",
+                                      }
+                    }
+                    maxHeight={500}
+                    multiple={false}
+                    onChange={[Function]}
+                    openImmediately={false}
+                    value={undefined}
+          >
+                    <MenuItem
+                              anchorOrigin={
+                                        Object {
+                                                  "horizontal": "right",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              checked={false}
+                              desktop={false}
+                              disabled={false}
+                              focusState="none"
+                              insetChildren={false}
+                              primaryText="All Years"
+                              targetOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              value="All"
+                    />
+                    <MenuItem
+                              anchorOrigin={
+                                        Object {
+                                                  "horizontal": "right",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              checked={false}
+                              desktop={false}
+                              disabled={false}
+                              focusState="none"
+                              insetChildren={false}
+                              primaryText="2013"
+                              targetOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              value="2013"
+                    />
+                    <MenuItem
+                              anchorOrigin={
+                                        Object {
+                                                  "horizontal": "right",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              checked={false}
+                              desktop={false}
+                              disabled={false}
+                              focusState="none"
+                              insetChildren={false}
+                              primaryText="2014"
+                              targetOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              value="2014"
+                    />
+          </DropDownMenu>
+</MuiThemeProvider>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <DropDownMenu
+            anchorOrigin={
+                        Object {
+                                    "horizontal": "left",
+                                    "vertical": "top",
+                                  }
+            }
+            animated={true}
+            autoWidth={true}
+            disabled={false}
+            iconButton={<NavigationArrowDropDown />}
+            labelStyle={
+                        Object {
+                                    "backgroundColor": "white",
+                                  }
+            }
+            maxHeight={500}
+            multiple={false}
+            onChange={[Function]}
+            openImmediately={false}
+            value={undefined}
+>
+            <MenuItem
+                        anchorOrigin={
+                                    Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                        }
+                        checked={false}
+                        desktop={false}
+                        disabled={false}
+                        focusState="none"
+                        insetChildren={false}
+                        primaryText="Number of Penalties"
+                        targetOrigin={
+                                    Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        value="Penalties"
+            />
+            <MenuItem
+                        anchorOrigin={
+                                    Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                        }
+                        checked={false}
+                        desktop={false}
+                        disabled={false}
+                        focusState="none"
+                        insetChildren={false}
+                        primaryText="Face Value ($)"
+                        targetOrigin={
+                                    Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        value="Face Value ($)"
+            />
+</DropDownMenu>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "anchorOrigin": Object {
+              "horizontal": "left",
+              "vertical": "top",
+            },
+            "animated": true,
+            "autoWidth": true,
+            "children": Array [
+              <MenuItem
+                anchorOrigin={
+                                Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                }
+                checked={false}
+                desktop={false}
+                disabled={false}
+                focusState="none"
+                insetChildren={false}
+                primaryText="Number of Penalties"
+                targetOrigin={
+                                Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                }
+                value="Penalties"
+/>,
+              <MenuItem
+                anchorOrigin={
+                                Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                }
+                checked={false}
+                desktop={false}
+                disabled={false}
+                focusState="none"
+                insetChildren={false}
+                primaryText="Face Value ($)"
+                targetOrigin={
+                                Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                }
+                value="Face Value ($)"
+/>,
+            ],
+            "disabled": false,
+            "iconButton": <NavigationArrowDropDown />,
+            "labelStyle": Object {
+              "backgroundColor": "white",
+            },
+            "maxHeight": 500,
+            "multiple": false,
+            "onChange": [Function],
+            "openImmediately": false,
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "anchorOrigin": Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                },
+                "checked": false,
+                "desktop": false,
+                "disabled": false,
+                "focusState": "none",
+                "insetChildren": false,
+                "primaryText": "Number of Penalties",
+                "targetOrigin": Object {
+                  "horizontal": "left",
+                  "vertical": "top",
+                },
+                "value": "Penalties",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "anchorOrigin": Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                },
+                "checked": false,
+                "desktop": false,
+                "disabled": false,
+                "focusState": "none",
+                "insetChildren": false,
+                "primaryText": "Face Value ($)",
+                "targetOrigin": Object {
+                  "horizontal": "left",
+                  "vertical": "top",
+                },
+                "value": "Face Value ($)",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <DropDownMenu
+            anchorOrigin={
+                        Object {
+                                    "horizontal": "left",
+                                    "vertical": "top",
+                                  }
+            }
+            animated={true}
+            autoWidth={true}
+            disabled={false}
+            iconButton={<NavigationArrowDropDown />}
+            labelStyle={
+                        Object {
+                                    "backgroundColor": "white",
+                                  }
+            }
+            maxHeight={500}
+            multiple={false}
+            onChange={[Function]}
+            openImmediately={false}
+            value={undefined}
+>
+            <MenuItem
+                        anchorOrigin={
+                                    Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                        }
+                        checked={false}
+                        desktop={false}
+                        disabled={false}
+                        focusState="none"
+                        insetChildren={false}
+                        primaryText="All Years"
+                        targetOrigin={
+                                    Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        value="All"
+            />
+            <MenuItem
+                        anchorOrigin={
+                                    Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                        }
+                        checked={false}
+                        desktop={false}
+                        disabled={false}
+                        focusState="none"
+                        insetChildren={false}
+                        primaryText="2013"
+                        targetOrigin={
+                                    Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        value="2013"
+            />
+            <MenuItem
+                        anchorOrigin={
+                                    Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                        }
+                        checked={false}
+                        desktop={false}
+                        disabled={false}
+                        focusState="none"
+                        insetChildren={false}
+                        primaryText="2014"
+                        targetOrigin={
+                                    Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        value="2014"
+            />
+</DropDownMenu>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "anchorOrigin": Object {
+              "horizontal": "left",
+              "vertical": "top",
+            },
+            "animated": true,
+            "autoWidth": true,
+            "children": Array [
+              <MenuItem
+                anchorOrigin={
+                                Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                }
+                checked={false}
+                desktop={false}
+                disabled={false}
+                focusState="none"
+                insetChildren={false}
+                primaryText="All Years"
+                targetOrigin={
+                                Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                }
+                value="All"
+/>,
+              <MenuItem
+                anchorOrigin={
+                                Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                }
+                checked={false}
+                desktop={false}
+                disabled={false}
+                focusState="none"
+                insetChildren={false}
+                primaryText="2013"
+                targetOrigin={
+                                Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                }
+                value="2013"
+/>,
+              <MenuItem
+                anchorOrigin={
+                                Object {
+                                                "horizontal": "right",
+                                                "vertical": "top",
+                                              }
+                }
+                checked={false}
+                desktop={false}
+                disabled={false}
+                focusState="none"
+                insetChildren={false}
+                primaryText="2014"
+                targetOrigin={
+                                Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                }
+                value="2014"
+/>,
+            ],
+            "disabled": false,
+            "iconButton": <NavigationArrowDropDown />,
+            "labelStyle": Object {
+              "backgroundColor": "white",
+            },
+            "maxHeight": 500,
+            "multiple": false,
+            "onChange": [Function],
+            "openImmediately": false,
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "anchorOrigin": Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                },
+                "checked": false,
+                "desktop": false,
+                "disabled": false,
+                "focusState": "none",
+                "insetChildren": false,
+                "primaryText": "All Years",
+                "targetOrigin": Object {
+                  "horizontal": "left",
+                  "vertical": "top",
+                },
+                "value": "All",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "anchorOrigin": Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                },
+                "checked": false,
+                "desktop": false,
+                "disabled": false,
+                "focusState": "none",
+                "insetChildren": false,
+                "primaryText": "2013",
+                "targetOrigin": Object {
+                  "horizontal": "left",
+                  "vertical": "top",
+                },
+                "value": "2013",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "anchorOrigin": Object {
+                  "horizontal": "right",
+                  "vertical": "top",
+                },
+                "checked": false,
+                "desktop": false,
+                "disabled": false,
+                "focusState": "none",
+                "insetChildren": false,
+                "primaryText": "2014",
+                "targetOrigin": Object {
+                  "horizontal": "left",
+                  "vertical": "top",
+                },
+                "value": "2014",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <MuiThemeProvider>
+            <DropDownMenu
+                        anchorOrigin={
+                                    Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        animated={true}
+                        autoWidth={true}
+                        disabled={false}
+                        iconButton={<NavigationArrowDropDown />}
+                        labelStyle={
+                                    Object {
+                                                "backgroundColor": "white",
+                                              }
+                        }
+                        maxHeight={500}
+                        multiple={false}
+                        onChange={[Function]}
+                        openImmediately={false}
+                        value={undefined}
+            >
+                        <MenuItem
+                                    anchorOrigin={
+                                                Object {
+                                                            "horizontal": "right",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    checked={false}
+                                    desktop={false}
+                                    disabled={false}
+                                    focusState="none"
+                                    insetChildren={false}
+                                    primaryText="Number of Penalties"
+                                    targetOrigin={
+                                                Object {
+                                                            "horizontal": "left",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    value="Penalties"
+                        />
+                        <MenuItem
+                                    anchorOrigin={
+                                                Object {
+                                                            "horizontal": "right",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    checked={false}
+                                    desktop={false}
+                                    disabled={false}
+                                    focusState="none"
+                                    insetChildren={false}
+                                    primaryText="Face Value ($)"
+                                    targetOrigin={
+                                                Object {
+                                                            "horizontal": "left",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    value="Face Value ($)"
+                        />
+            </DropDownMenu>
+</MuiThemeProvider>,
+          <MuiThemeProvider>
+            <DropDownMenu
+                        anchorOrigin={
+                                    Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        animated={true}
+                        autoWidth={true}
+                        disabled={false}
+                        iconButton={<NavigationArrowDropDown />}
+                        labelStyle={
+                                    Object {
+                                                "backgroundColor": "white",
+                                              }
+                        }
+                        maxHeight={500}
+                        multiple={false}
+                        onChange={[Function]}
+                        openImmediately={false}
+                        value={undefined}
+            >
+                        <MenuItem
+                                    anchorOrigin={
+                                                Object {
+                                                            "horizontal": "right",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    checked={false}
+                                    desktop={false}
+                                    disabled={false}
+                                    focusState="none"
+                                    insetChildren={false}
+                                    primaryText="All Years"
+                                    targetOrigin={
+                                                Object {
+                                                            "horizontal": "left",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    value="All"
+                        />
+                        <MenuItem
+                                    anchorOrigin={
+                                                Object {
+                                                            "horizontal": "right",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    checked={false}
+                                    desktop={false}
+                                    disabled={false}
+                                    focusState="none"
+                                    insetChildren={false}
+                                    primaryText="2013"
+                                    targetOrigin={
+                                                Object {
+                                                            "horizontal": "left",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    value="2013"
+                        />
+                        <MenuItem
+                                    anchorOrigin={
+                                                Object {
+                                                            "horizontal": "right",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    checked={false}
+                                    desktop={false}
+                                    disabled={false}
+                                    focusState="none"
+                                    insetChildren={false}
+                                    primaryText="2014"
+                                    targetOrigin={
+                                                Object {
+                                                            "horizontal": "left",
+                                                            "vertical": "top",
+                                                          }
+                                    }
+                                    value="2014"
+                        />
+            </DropDownMenu>
+</MuiThemeProvider>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <DropDownMenu
+              anchorOrigin={
+                            Object {
+                                          "horizontal": "left",
+                                          "vertical": "top",
+                                        }
+              }
+              animated={true}
+              autoWidth={true}
+              disabled={false}
+              iconButton={<NavigationArrowDropDown />}
+              labelStyle={
+                            Object {
+                                          "backgroundColor": "white",
+                                        }
+              }
+              maxHeight={500}
+              multiple={false}
+              onChange={[Function]}
+              openImmediately={false}
+              value={undefined}
+>
+              <MenuItem
+                            anchorOrigin={
+                                          Object {
+                                                        "horizontal": "right",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            checked={false}
+                            desktop={false}
+                            disabled={false}
+                            focusState="none"
+                            insetChildren={false}
+                            primaryText="Number of Penalties"
+                            targetOrigin={
+                                          Object {
+                                                        "horizontal": "left",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            value="Penalties"
+              />
+              <MenuItem
+                            anchorOrigin={
+                                          Object {
+                                                        "horizontal": "right",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            checked={false}
+                            desktop={false}
+                            disabled={false}
+                            focusState="none"
+                            insetChildren={false}
+                            primaryText="Face Value ($)"
+                            targetOrigin={
+                                          Object {
+                                                        "horizontal": "left",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            value="Face Value ($)"
+              />
+</DropDownMenu>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "anchorOrigin": Object {
+                "horizontal": "left",
+                "vertical": "top",
+              },
+              "animated": true,
+              "autoWidth": true,
+              "children": Array [
+                <MenuItem
+                  anchorOrigin={
+                                    Object {
+                                                      "horizontal": "right",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="Number of Penalties"
+                  targetOrigin={
+                                    Object {
+                                                      "horizontal": "left",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  value="Penalties"
+/>,
+                <MenuItem
+                  anchorOrigin={
+                                    Object {
+                                                      "horizontal": "right",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="Face Value ($)"
+                  targetOrigin={
+                                    Object {
+                                                      "horizontal": "left",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  value="Face Value ($)"
+/>,
+              ],
+              "disabled": false,
+              "iconButton": <NavigationArrowDropDown />,
+              "labelStyle": Object {
+                "backgroundColor": "white",
+              },
+              "maxHeight": 500,
+              "multiple": false,
+              "onChange": [Function],
+              "openImmediately": false,
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "anchorOrigin": Object {
+                    "horizontal": "right",
+                    "vertical": "top",
+                  },
+                  "checked": false,
+                  "desktop": false,
+                  "disabled": false,
+                  "focusState": "none",
+                  "insetChildren": false,
+                  "primaryText": "Number of Penalties",
+                  "targetOrigin": Object {
+                    "horizontal": "left",
+                    "vertical": "top",
+                  },
+                  "value": "Penalties",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "anchorOrigin": Object {
+                    "horizontal": "right",
+                    "vertical": "top",
+                  },
+                  "checked": false,
+                  "desktop": false,
+                  "disabled": false,
+                  "focusState": "none",
+                  "insetChildren": false,
+                  "primaryText": "Face Value ($)",
+                  "targetOrigin": Object {
+                    "horizontal": "left",
+                    "vertical": "top",
+                  },
+                  "value": "Face Value ($)",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <DropDownMenu
+              anchorOrigin={
+                            Object {
+                                          "horizontal": "left",
+                                          "vertical": "top",
+                                        }
+              }
+              animated={true}
+              autoWidth={true}
+              disabled={false}
+              iconButton={<NavigationArrowDropDown />}
+              labelStyle={
+                            Object {
+                                          "backgroundColor": "white",
+                                        }
+              }
+              maxHeight={500}
+              multiple={false}
+              onChange={[Function]}
+              openImmediately={false}
+              value={undefined}
+>
+              <MenuItem
+                            anchorOrigin={
+                                          Object {
+                                                        "horizontal": "right",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            checked={false}
+                            desktop={false}
+                            disabled={false}
+                            focusState="none"
+                            insetChildren={false}
+                            primaryText="All Years"
+                            targetOrigin={
+                                          Object {
+                                                        "horizontal": "left",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            value="All"
+              />
+              <MenuItem
+                            anchorOrigin={
+                                          Object {
+                                                        "horizontal": "right",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            checked={false}
+                            desktop={false}
+                            disabled={false}
+                            focusState="none"
+                            insetChildren={false}
+                            primaryText="2013"
+                            targetOrigin={
+                                          Object {
+                                                        "horizontal": "left",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            value="2013"
+              />
+              <MenuItem
+                            anchorOrigin={
+                                          Object {
+                                                        "horizontal": "right",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            checked={false}
+                            desktop={false}
+                            disabled={false}
+                            focusState="none"
+                            insetChildren={false}
+                            primaryText="2014"
+                            targetOrigin={
+                                          Object {
+                                                        "horizontal": "left",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            value="2014"
+              />
+</DropDownMenu>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "anchorOrigin": Object {
+                "horizontal": "left",
+                "vertical": "top",
+              },
+              "animated": true,
+              "autoWidth": true,
+              "children": Array [
+                <MenuItem
+                  anchorOrigin={
+                                    Object {
+                                                      "horizontal": "right",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="All Years"
+                  targetOrigin={
+                                    Object {
+                                                      "horizontal": "left",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  value="All"
+/>,
+                <MenuItem
+                  anchorOrigin={
+                                    Object {
+                                                      "horizontal": "right",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="2013"
+                  targetOrigin={
+                                    Object {
+                                                      "horizontal": "left",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  value="2013"
+/>,
+                <MenuItem
+                  anchorOrigin={
+                                    Object {
+                                                      "horizontal": "right",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="2014"
+                  targetOrigin={
+                                    Object {
+                                                      "horizontal": "left",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  value="2014"
+/>,
+              ],
+              "disabled": false,
+              "iconButton": <NavigationArrowDropDown />,
+              "labelStyle": Object {
+                "backgroundColor": "white",
+              },
+              "maxHeight": 500,
+              "multiple": false,
+              "onChange": [Function],
+              "openImmediately": false,
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "anchorOrigin": Object {
+                    "horizontal": "right",
+                    "vertical": "top",
+                  },
+                  "checked": false,
+                  "desktop": false,
+                  "disabled": false,
+                  "focusState": "none",
+                  "insetChildren": false,
+                  "primaryText": "All Years",
+                  "targetOrigin": Object {
+                    "horizontal": "left",
+                    "vertical": "top",
+                  },
+                  "value": "All",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "anchorOrigin": Object {
+                    "horizontal": "right",
+                    "vertical": "top",
+                  },
+                  "checked": false,
+                  "desktop": false,
+                  "disabled": false,
+                  "focusState": "none",
+                  "insetChildren": false,
+                  "primaryText": "2013",
+                  "targetOrigin": Object {
+                    "horizontal": "left",
+                    "vertical": "top",
+                  },
+                  "value": "2013",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "anchorOrigin": Object {
+                    "horizontal": "right",
+                    "vertical": "top",
+                  },
+                  "checked": false,
+                  "desktop": false,
+                  "disabled": false,
+                  "focusState": "none",
+                  "insetChildren": false,
+                  "primaryText": "2014",
+                  "targetOrigin": Object {
+                    "horizontal": "left",
+                    "vertical": "top",
+                  },
+                  "value": "2014",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
